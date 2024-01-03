@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Principal</title>
+    <script src="pagina_principal.js"></script>
+</head>
+<body>
+    <h1>Página Principal</h1>
+    <p>Bem-vindo, estudante!</p>
+
+    <!-- Aqui você pode exibir o conteúdo específico para o estudante logado -->
+
+    <script>
+        // Pegar o código do estudante dos parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        // Exemplo de uso do código do estudante para exibir uma mensagem personalizada
+        const studentInfo = document.createElement("p");
+        studentInfo.textContent = "Seu código de estudante é: " + code;
+        document.body.appendChild(studentInfo);
+    </script>
+</body>
+</html>
+ 
